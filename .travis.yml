@@ -64,6 +64,8 @@ install:
 before_script:
     # first, run source_validator
     - python script/validators/source_validator.py
+    # enable aliases and make python3 point to python
+     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then alias python3=python && shopt -s expand_aliases; fi
 
 # build peloton (override this value to execute tests)
 script:

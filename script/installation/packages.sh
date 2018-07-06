@@ -176,6 +176,8 @@ if [ "$DISTRO" = "UBUNTU" ]; then
         libedit-dev \
         libssl-dev \
         postgresql-client \
+        libffi6 \
+        libffi-dev \
         libtbb-dev \
         python3-pip \
         curl \
@@ -219,11 +221,11 @@ elif [ "$DISTRO" = "DARWIN" ]; then
     brew install libedit
     brew install llvm@3.7
     brew install postgresql
+    brew install libffi
     brew install tbb
     brew install curl
     brew install wget
-    brew install python
-    brew upgrade python
+    python3 -m ensurepip
     brew install eigen
     brew install ant
     # Brew installs correct version of Protobuf(3.5.1 >= 3.4.0)
