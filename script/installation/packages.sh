@@ -225,8 +225,7 @@ elif [ "$DISTRO" = "DARWIN" ]; then
     brew install tbb
     brew install curl
     brew install wget
-    brew install python
-    brew upgrade python
+    python3 -m ensurepip
     brew install eigen
     brew install ant
     # Brew installs correct version of Protobuf(3.5.1 >= 3.4.0)
