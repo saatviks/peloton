@@ -125,8 +125,6 @@ class LSTM:
 
 def main():
     parser = argparse.ArgumentParser(description='LSTM Model Generator')
-
-
     parser.add_argument('--nfeats', type=int, default=3, help='Input feature length(input to encoder/linear layer)')
     parser.add_argument('--nencoded', type=int, default=20, help='Encoded feature length(input to LSTM)')
     parser.add_argument('--nhid', type=int, default=20, help='Number of LSTM Hidden units')
